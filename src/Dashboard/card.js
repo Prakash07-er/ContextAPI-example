@@ -7,11 +7,7 @@ import Approach from './approach'
 
 
 
-import {useContext} from 'react';
-import UserContext from '../userContext'
-
 export default  function Card (props){
-    let data =useContext(UserContext)
     return (<>
                 <div class="row">
 
