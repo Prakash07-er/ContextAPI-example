@@ -1,11 +1,11 @@
 import React from 'react'
 import { useContext } from 'react';
 import { useState } from 'react'
-import UserContext from './userContext';
+import ProfileContext from './profileContext';
 
-export default  function Usercreate() {
+export default  function Profilecreate() {
 
-    let userData = useContext(UserContext)
+    let profileData = useContext(ProfileContext)
 
     let [name,setname] = useState("");
     let [position,setposition] = useState("");
@@ -13,9 +13,9 @@ export default  function Usercreate() {
     let [age,setage] = useState("");
     let [salery,setsalery] = useState("");
 
-    let userSubmit = (e) => {
+    let profileSubmit = (e) => {
         e.preventDefault();
-         userData.setuserList([...userData.userList,{
+         profileData.setprofileList([...profileData.profileList,{
             name,
             position,
             office,
@@ -26,13 +26,13 @@ export default  function Usercreate() {
 
     return (
         <div className="container">
-            <h1> User Create</h1>
+            <h1> Profile Create</h1>
             <div class="container rounded bg-white mt-5 mb-5">
             
-            <form class="col-md-12 border-right" onSubmit={userSubmit}>
+            <form class="col-md-12 border-right" onSubmit={profileSubmit}>
                 <div class="p-3 py-5">
                     <div class="d-flex justify-content-between align-items-center mb-3">
-                        <h4 class="text-right">User Create</h4>
+                        <h4 class="text-right">Profile Create</h4>
                     </div>
                     <div class="row mt-2">
                         <div class="col-md-6"><label class="labels">Name</label>

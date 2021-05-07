@@ -1,4 +1,5 @@
 import React from 'react';
+import { useState } from 'react';
 
 let UserContext =React.createContext();
 
@@ -7,9 +8,10 @@ export default UserContext;
 
 export const UserProvider =({children}) => {
 
-    let a = 5;
+    let [userList,setuserList] = useState([])
+
     return(
-        <UserContext.Provider value={{a}}>
+        <UserContext.Provider value={{userList,setuserList}}>
         {children}
     </UserContext.Provider>
     )
